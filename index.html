@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You still Be My Valentine?</title>
+    <title>Luv U</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
     <link rel="stylesheet" href="style.css">  
 </head>
@@ -11,14 +11,43 @@
     <div id="container">
         <div id="image-container"></div> <!-- Container for displaying images -->
         <div id="text-container">
-            <div id="question">Will you still be my valentine?</div> <!-- Question -->
-            <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Yes</button> <!-- Yes button -->
-                <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
-            </div>
+            <h1>💖 Will you be my Girlfriend? 💖</h1>
+            <p>Will you be my Girlfriend <p>
+            <button class="yes-button" id="yesButton">Yes, I do 💕</button>
+            <button class="no-button" id="noButton">No 💔</button>
+            <p class="additional-text" id="additionalText"></p>
+        </div>        
         </div>
     </div>
-
+    
     <script src="script.js"></script> 
+
+    <script>
+        window.addEventListener('load', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+            const container = document.querySelector('.container');
+            const additionalText = document.getElementById('additionalText');
+       
+             yesButton.addEventListener('click', () => {
+                alert('hehe Luv u ❤️😍😘🥰 ');
+                window.location.href = "index0.html";
+            });
+
+        
+            noButton.addEventListener('click', () => {
+                alert('💞 Say yesss, Pleaseee 💞');
+                const randomX = Math.random() * (window.innerWidth - 100); 
+                const randomY = Math.random() * (window.innerHeight - 50); 
+                noButton.style.position = 'absolute';
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+                
+        
+                container.querySelector('p').innerText = " please";
+            });
+            additionalText.innerText = "hehe 💘";  additionalText.style.display = 'block';
+        });
+        </script>
 </body>
 </html>
